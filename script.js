@@ -603,9 +603,12 @@
 
   async function compartirInvitacion() {
     const url = obtenerEnlaceInvitacion();
+    const fechaEnMinuscula =
+      EVENTO.fecha.larga.charAt(0).toLowerCase() + EVENTO.fecha.larga.slice(1);
+
     const datosCompartir = {
       title: `Grado de abogada de ${EVENTO.nombre.pila}`,
-      text: `Acompáñame a celebrar mi grado de abogada el ${EVENTO.fecha.larga} a las ${EVENTO.fecha.hora}`,
+      text: `Acompáñame a celebrar mi grado de abogada el ${fechaEnMinuscula} a las ${EVENTO.fecha.hora}\n\nConfirma tu asistencia en el siguiente enlace:`,
       url
     };
 
